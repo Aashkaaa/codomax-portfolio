@@ -8,11 +8,20 @@
 </head>
 <body>
 
-  <!-- Home / Navbar placeholder (nav comes on Day 3) -->
+  <!-- Header / Navigation -->
   <header id="home">
-    <div class="container">
-      <h2 class="logo">Aashka</h2>
-    </div>
+    <nav class="navbar">
+      <div class="container">
+        <h2 class="logo">Aashka</h2>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <!-- Hero Section -->
@@ -36,6 +45,63 @@
       </p>
     </div>
   </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>B.Tech in Computer Science</h3>
+        <p>Rajkiya Engineering College, Banda</p>
+        <span>2024 &ndash; 2028</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form class="contact-form" action="#" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aashka. All Rights Reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/Aashkaaa" target="_blank">GitHub</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
