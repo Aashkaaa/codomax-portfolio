@@ -1,43 +1,86 @@
-/* ===== Contact Details & Social Icons ===== */
-.contact-details {
-  margin-bottom: 20px;
+/* ===== Smooth Scrolling ===== */
+html {
+  scroll-behavior: smooth;
 }
 
-.contact-details li {
-  padding: 6px 0;
-  color: #444;
-  font-size: 0.95rem;
+/* ===== Scroll Reveal Animation ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.social-icons {
-  display: flex;
-  gap: 16px;
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.social-icons a {
-  background-color: #1a1a2e;
-  color: #ffffff;
-  padding: 8px 18px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+/* ===== Hero Fade-in on Load ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeIn 1s ease forwards;
 }
 
-.social-icons a:hover {
+#hero h1.fade-in {
+  animation-delay: 0.1s;
+}
+
+#hero p.fade-in {
+  animation-delay: 0.35s;
+}
+
+#hero .hero-buttons.fade-in {
+  animation-delay: 0.6s;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Enhanced Hover Effects ===== */
+.logo {
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.skills-list li {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skills-list li:hover {
+  transform: translateY(-4px) scale(1.05);
   background-color: #e94560;
 }
 
-/* ===== Form Validation Styles ===== */
-.contact-form input.invalid,
-.contact-form textarea.invalid {
-  border-color: #e94560;
-  background-color: #fff5f6;
+.timeline-dot {
+  transition: transform 0.3s ease;
 }
 
-.error-msg {
-  color: #e94560;
-  font-size: 0.8rem;
-  min-height: 16px;
-  display: block;
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.3);
+}
+
+.social-icons a,
+.social-links a {
+  transition: transform 0.25s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+.education-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
