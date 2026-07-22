@@ -161,6 +161,11 @@ section h2::after {
   background-color: #f7f7fb;
 }
 
+#education .container {
+  display: grid;
+  place-items: center;
+}
+
 .education-item {
   max-width: 600px;
   margin: 0 auto;
@@ -182,10 +187,31 @@ section h2::after {
   font-size: 0.9rem;
 }
 
-/* ===== Contact Section ===== */
+/* ===== Contact Section (Grid Layout) ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.contact-info p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-info ul li {
+  padding: 8px 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
 .contact-form {
-  max-width: 550px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -213,7 +239,7 @@ section h2::after {
 
 .contact-form button {
   margin-top: 20px;
-  align-self: center;
+  align-self: flex-start;
 }
 
 /* ===== Footer ===== */
@@ -239,4 +265,20 @@ footer {
 
 .social-links a:hover {
   color: #e94560;
+}
+
+/* ===== Responsive: stack contact grid on smaller screens ===== */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
 }
