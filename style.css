@@ -45,6 +45,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -65,6 +66,16 @@ ul {
 
 .nav-links a:hover {
   color: #e94560;
+}
+
+/* ===== Menu Toggle (hidden on desktop) ===== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
 /* ===== Hero Section ===== */
@@ -267,18 +278,108 @@ footer {
   color: #e94560;
 }
 
-/* ===== Responsive: stack contact grid on smaller screens ===== */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
+/* ===== TABLET (max-width: 1024px) ===== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
   }
 
-  .nav-links {
-    gap: 16px;
-    flex-wrap: wrap;
+  #hero {
+    padding: 90px 24px;
   }
 
   #hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}
+
+/* ===== MOBILE (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    padding: 16px 0;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-list {
+    gap: 10px;
+  }
+
+  .skills-list li {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .education-item {
+    padding: 24px;
+  }
+}
+
+/* ===== SMALL MOBILE (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  #hero {
+    padding: 70px 16px;
+  }
+
+  #hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
   }
 }
