@@ -39,6 +39,12 @@ ul {
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #12121f;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .container {
@@ -278,6 +284,36 @@ footer {
   color: #e94560;
 }
 
+/* ===== Scroll to Top Button ===== */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background-color: #e94560;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 200;
+}
+
+#scrollTopBtn.show {
+  display: flex;
+}
+
+#scrollTopBtn:hover {
+  background-color: #d63852;
+  transform: translateY(-3px);
+}
+
 /* ===== TABLET (max-width: 1024px) ===== */
 @media (max-width: 1024px) {
   .container {
@@ -348,6 +384,13 @@ footer {
 
   .education-item {
     padding: 24px;
+  }
+
+  #scrollTopBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
   }
 }
 
