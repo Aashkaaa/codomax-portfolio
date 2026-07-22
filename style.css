@@ -61,12 +61,13 @@ ul {
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }
 
 .nav-links a {
   color: #e5e5e5;
   font-weight: 500;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
@@ -104,6 +105,13 @@ ul {
   margin-bottom: 32px;
 }
 
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .btn {
   display: inline-block;
   background-color: #e94560;
@@ -119,6 +127,17 @@ ul {
 .btn:hover {
   background-color: #d63852;
   transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: #1a1a2e;
 }
 
 /* ===== Section Spacing ===== */
@@ -253,9 +272,72 @@ section h2::after {
   text-decoration: underline;
 }
 
+/* ===== Experience Section (Timeline) ===== */
+#experience {
+  background-color: #f7f7fb;
+}
+
+.timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid #e94560;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -39px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  background-color: #e94560;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #e94560;
+}
+
+.timeline-content {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.timeline-date {
+  display: inline-block;
+  color: #e94560;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  font-size: 0.92rem;
+  color: #555;
+}
+
+.timeline-desc {
+  margin-top: 6px;
+}
+
 /* ===== Education Section ===== */
 #education {
-  background-color: #f7f7fb;
+  background-color: #ffffff;
 }
 
 #education .container {
@@ -267,7 +349,7 @@ section h2::after {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #f7f7fb;
   padding: 32px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -468,6 +550,14 @@ footer {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-dot {
+    left: -33px;
   }
 
   .education-item {
